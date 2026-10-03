@@ -6,6 +6,7 @@
  */
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { store } from '@/lib/store';
 import { Club } from '@/types';
 import {
@@ -105,18 +106,15 @@ export default function LandingPage({ onEnterApp, onOpenClubRegistration }: Land
 
       {/* 2. PUBLIC HEADER NAVIGATION */}
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 px-4 sm:px-8 py-3.5 flex items-center justify-between shadow-xs">
-        <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#0284C7] to-[#38BDF8] flex items-center justify-center text-white font-black text-xl shadow-md">
-            S
-          </div>
-          <div>
-            <span className="font-extrabold text-slate-950 text-lg tracking-tight block leading-none">
-              SCMS
-            </span>
-            <span className="text-[11px] text-[#0284C7] font-bold tracking-wider uppercase block mt-0.5">
-              SP SportData Solution
-            </span>
-          </div>
+        <div className="flex items-center overflow-hidden h-full py-1">
+          <Image
+            src="/logo.jpg"
+            alt="SP SportData Solution"
+            width={220}
+            height={44}
+            className="h-10 w-auto object-contain"
+            priority
+          />
         </div>
 
         <nav className="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-600">

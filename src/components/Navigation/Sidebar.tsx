@@ -7,6 +7,7 @@
  */
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { useAuth } from '@/context/AuthContext';
 import {
   LayoutDashboard,
@@ -219,24 +220,29 @@ export default function Sidebar({
       {/* Brand Header */}
       <div className="h-16 px-4 flex items-center justify-between border-b border-[#BAE6FD] bg-[#E0F2FE]/60">
         {!collapsed && (
-          <div className="flex items-center space-x-3 overflow-hidden">
-            <div className="w-9 h-9 rounded-lg bg-gradient-to-tr from-[#0284C7] to-[#38BDF8] flex items-center justify-center text-white font-black text-lg shadow-sm shrink-0">
-              S
-            </div>
-            <div className="truncate">
-              <span className="font-extrabold text-[#0F172A] tracking-tight text-base block leading-none">
-                SCMS
-              </span>
-              <span className="text-[10px] text-[#0284C7] font-semibold tracking-wider uppercase block mt-0.5">
-                SP SportData
-              </span>
-            </div>
+          <div className="flex items-center overflow-hidden h-full py-2">
+            <Image
+              src="/logo.jpg"
+              alt="SP SportData Solution"
+              width={200}
+              height={40}
+              className="h-full w-auto object-contain"
+              priority
+            />
           </div>
         )}
 
         {collapsed && (
-          <div className="mx-auto w-9 h-9 rounded-lg bg-gradient-to-tr from-[#0284C7] to-[#38BDF8] flex items-center justify-center text-white font-black text-lg shadow-sm">
-            S
+          <div className="mx-auto flex items-center justify-center w-full h-full py-2 overflow-hidden">
+             <Image
+              src="/logo.jpg"
+              alt="SP"
+              width={40}
+              height={40}
+              className="h-8 w-auto object-cover object-left"
+              style={{ width: '32px' }}
+              priority
+            />
           </div>
         )}
 

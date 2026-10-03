@@ -6,6 +6,7 @@
  */
 
 import React from 'react';
+import Image from 'next/image';
 import { useAuth } from '@/context/AuthContext';
 import {
   X,
@@ -74,18 +75,15 @@ export default function MobileDrawer({
       <div className="relative w-4/5 max-w-sm bg-[#F0F9FF] border-r border-[#BAE6FD] h-full flex flex-col shadow-2xl z-10 animate-fade-in">
         {/* Drawer Header */}
         <div className="h-16 px-4 bg-[#E0F2FE] border-b border-[#BAE6FD] flex items-center justify-between">
-          <div className="flex items-center space-x-2.5">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#0284C7] to-[#38BDF8] flex items-center justify-center text-white font-extrabold text-base shadow-xs">
-              S
-            </div>
-            <div>
-              <span className="font-extrabold text-slate-900 text-sm block leading-none">
-                SCMS
-              </span>
-              <span className="text-[10px] text-[#0284C7] font-bold tracking-wider uppercase block mt-0.5">
-                SP SportData
-              </span>
-            </div>
+          <div className="flex items-center overflow-hidden py-1 h-full">
+            <Image
+              src="/logo.jpg"
+              alt="SP SportData Solution"
+              width={160}
+              height={32}
+              className="h-full w-auto object-contain"
+              priority
+            />
           </div>
 
           <button
