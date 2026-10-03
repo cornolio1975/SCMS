@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* SCMS Mandatory Design Tokens */
+    --scms-sidebar-bg: #F0F9FF;       /* Light Blue Background */
+    --scms-sidebar-border: #BAE6FD;   /* Sky-200 Border */
+    --scms-sidebar-active: #E0F2FE;   /* Sky-100 Active item */
+    --scms-sidebar-accent: #0284C7;   /* Sky-600 Vibrant Accent */
+    --scms-sidebar-text: #0F172A;     /* Slate-900 High Contrast */
+    --scms-sidebar-muted: #475569;    /* Slate-600 Navigation Subtitle */
+    
+    --scms-workspace-bg: #FFFFFF;     /* Crisp White Workspace */
+    --scms-surface: #F8FAFC;          /* Slate-50 Sub-surface */
+    --scms-surface-card: #FFFFFF;     /* Pure White Card */
+    --scms-border: #E2E8F0;           /* Slate-200 Border */
+    --scms-text-main: #0F172A;        /* Slate-900 Main text */
+    --scms-text-muted: #64748B;       /* Slate-500 Secondary text */
+  }
+
+  body {
+    background-color: var(--scms-workspace-bg);
+    color: var(--scms-text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Custom Smooth Scrollbar for clean SaaS feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Animation Utilities */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Touch Friendly Utilities */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
