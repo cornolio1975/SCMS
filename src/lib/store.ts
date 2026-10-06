@@ -1,5 +1,5 @@
 /**
- * SCMS In-Memory & Persistent Data Store
+ * Scms In-Memory & Persistent Data Store
  * Fully normalized, multi-tenant, auditable data store with mock seed data
  */
 
@@ -34,7 +34,7 @@ import { generateImmutableId, generateIdempotencyKey } from './idGenerator';
 
 export const INITIAL_CLUBS: Club[] = [
   {
-    id: 'SCMS-CLUB-000001',
+    id: 'Scms-CLUB-000001',
     name: 'Senshi Goju-Ryu Karate-Do Academy',
     shortName: 'Senshi Karate',
     sport: 'Karate',
@@ -65,8 +65,8 @@ export const INITIAL_CLUBS: Club[] = [
 export const INITIAL_BRANCHES: ClubBranch[] = [
   // Branches for Senshi Karate
   {
-    id: 'SCMS-CLUB-000001-B001',
-    clubId: 'SCMS-CLUB-000001',
+    id: 'Scms-CLUB-000001-B001',
+    clubId: 'Scms-CLUB-000001',
     name: 'Dojo Saujana Puchong (HQ)',
     address: 'No. 23, Jalan SP8/14, Saujana Puchong',
     city: 'Puchong',
@@ -84,8 +84,8 @@ export const INITIAL_BRANCHES: ClubBranch[] = [
     updatedAt: '2026-01-10T08:00:00Z',
   },
   {
-    id: 'SCMS-CLUB-000001-B002',
-    clubId: 'SCMS-CLUB-000001',
+    id: 'Scms-CLUB-000001-B002',
+    clubId: 'Scms-CLUB-000001',
     name: 'Dojo USJ Subang Jaya',
     address: 'Kompleks Sukan USJ 7',
     city: 'Subang Jaya',
@@ -103,8 +103,8 @@ export const INITIAL_BRANCHES: ClubBranch[] = [
     updatedAt: '2026-01-12T08:00:00Z',
   },
   {
-    id: 'SCMS-CLUB-000001-B003',
-    clubId: 'SCMS-CLUB-000001',
+    id: 'Scms-CLUB-000001-B003',
+    clubId: 'Scms-CLUB-000001',
     name: 'Dojo Cyberjaya Tech',
     address: 'Cyberjaya Community Clubhouse',
     city: 'Cyberjaya',
@@ -123,8 +123,8 @@ export const INITIAL_BRANCHES: ClubBranch[] = [
   },
   // Branches for Harimau FC
   {
-    id: 'SCMS-CLUB-000002-B001',
-    clubId: 'SCMS-CLUB-000002',
+    id: 'Scms-CLUB-000002-B001',
+    clubId: 'Scms-CLUB-000002',
     name: 'Shah Alam Football Field A',
     address: 'Seksyen 13 Sports Park',
     city: 'Shah Alam',
@@ -158,12 +158,12 @@ export const INITIAL_USERS: User[] = [
     email: 'kannan@senshikarate.org',
     fullName: 'Shihan Kannan',
     roles: [
-      { role: 'CLUB_ADMIN', clubId: 'SCMS-CLUB-000001', grantedAt: '2026-01-10T08:00:00Z' },
-      { role: 'COACH', clubId: 'SCMS-CLUB-000001', branchId: 'SCMS-CLUB-000001-B001', grantedAt: '2026-01-10T08:00:00Z' },
+      { role: 'CLUB_ADMIN', clubId: 'Scms-CLUB-000001', grantedAt: '2026-01-10T08:00:00Z' },
+      { role: 'COACH', clubId: 'Scms-CLUB-000001', branchId: 'Scms-CLUB-000001-B001', grantedAt: '2026-01-10T08:00:00Z' },
     ],
     activeRole: 'CLUB_ADMIN',
-    activeClubId: 'SCMS-CLUB-000001',
-    activeBranchId: 'SCMS-CLUB-000001-B001',
+    activeClubId: 'Scms-CLUB-000001',
+    activeBranchId: 'Scms-CLUB-000001-B001',
     status: 'Active',
     createdAt: '2026-01-10T08:00:00Z',
   },
@@ -172,12 +172,12 @@ export const INITIAL_USERS: User[] = [
     email: 'mohan@senshikarate.org',
     fullName: 'Sensei Mohan',
     roles: [
-      { role: 'BRANCH_MANAGER', clubId: 'SCMS-CLUB-000001', branchId: 'SCMS-CLUB-000001-B002', grantedAt: '2026-01-12T08:00:00Z' },
-      { role: 'COACH', clubId: 'SCMS-CLUB-000001', branchId: 'SCMS-CLUB-000001-B002', grantedAt: '2026-01-12T08:00:00Z' },
+      { role: 'BRANCH_MANAGER', clubId: 'Scms-CLUB-000001', branchId: 'Scms-CLUB-000001-B002', grantedAt: '2026-01-12T08:00:00Z' },
+      { role: 'COACH', clubId: 'Scms-CLUB-000001', branchId: 'Scms-CLUB-000001-B002', grantedAt: '2026-01-12T08:00:00Z' },
     ],
     activeRole: 'BRANCH_MANAGER',
-    activeClubId: 'SCMS-CLUB-000001',
-    activeBranchId: 'SCMS-CLUB-000001-B002',
+    activeClubId: 'Scms-CLUB-000001',
+    activeBranchId: 'Scms-CLUB-000001-B002',
     status: 'Active',
     createdAt: '2026-01-12T08:00:00Z',
   },
@@ -186,13 +186,13 @@ export const INITIAL_USERS: User[] = [
     email: 'ahmad.daniel@example.com',
     fullName: 'Ahmad Daniel',
     roles: [
-      { role: 'MEMBER', clubId: 'SCMS-CLUB-000001', branchId: 'SCMS-CLUB-000001-B001', grantedAt: '2026-01-15T00:00:00Z' },
-      { role: 'ATHLETE', clubId: 'SCMS-CLUB-000001', branchId: 'SCMS-CLUB-000001-B001', grantedAt: '2026-01-15T00:00:00Z' },
-      { role: 'VOLUNTEER', clubId: 'SCMS-CLUB-000001', branchId: 'SCMS-CLUB-000001-B001', grantedAt: '2026-01-15T00:00:00Z' },
+      { role: 'MEMBER', clubId: 'Scms-CLUB-000001', branchId: 'Scms-CLUB-000001-B001', grantedAt: '2026-01-15T00:00:00Z' },
+      { role: 'ATHLETE', clubId: 'Scms-CLUB-000001', branchId: 'Scms-CLUB-000001-B001', grantedAt: '2026-01-15T00:00:00Z' },
+      { role: 'VOLUNTEER', clubId: 'Scms-CLUB-000001', branchId: 'Scms-CLUB-000001-B001', grantedAt: '2026-01-15T00:00:00Z' },
     ],
     activeRole: 'VOLUNTEER',
-    activeClubId: 'SCMS-CLUB-000001',
-    activeBranchId: 'SCMS-CLUB-000001-B001',
+    activeClubId: 'Scms-CLUB-000001',
+    activeBranchId: 'Scms-CLUB-000001-B001',
     status: 'Active',
     createdAt: '2026-01-15T00:00:00Z',
   },
@@ -201,11 +201,11 @@ export const INITIAL_USERS: User[] = [
     email: 'fatimah.ali@example.com',
     fullName: 'Puan Fatimah Ali',
     roles: [
-      { role: 'PARENT', clubId: 'SCMS-CLUB-000001', branchId: 'SCMS-CLUB-000001-B001', grantedAt: '2026-01-15T00:00:00Z' },
+      { role: 'PARENT', clubId: 'Scms-CLUB-000001', branchId: 'Scms-CLUB-000001-B001', grantedAt: '2026-01-15T00:00:00Z' },
     ],
     activeRole: 'PARENT',
-    activeClubId: 'SCMS-CLUB-000001',
-    activeBranchId: 'SCMS-CLUB-000001-B001',
+    activeClubId: 'Scms-CLUB-000001',
+    activeBranchId: 'Scms-CLUB-000001-B001',
     status: 'Active',
     createdAt: '2026-01-15T00:00:00Z',
   },
@@ -213,9 +213,9 @@ export const INITIAL_USERS: User[] = [
 
 export const INITIAL_MEMBERS: Member[] = [
   {
-    id: 'SCMS-MEM-000001',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    id: 'Scms-MEM-000001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     userId: 'usr-volunteer-ahmad',
     fullName: 'Ahmad Daniel bin Razak',
     preferredName: 'Daniel',
@@ -247,9 +247,9 @@ export const INITIAL_MEMBERS: Member[] = [
     updatedAt: '2026-02-10T00:00:00Z',
   },
   {
-    id: 'SCMS-MEM-000002',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    id: 'Scms-MEM-000002',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     fullName: 'Chloe Tan Jia Xin',
     preferredName: 'Chloe',
     gender: 'Female',
@@ -280,9 +280,9 @@ export const INITIAL_MEMBERS: Member[] = [
     updatedAt: '2026-02-12T00:00:00Z',
   },
   {
-    id: 'SCMS-MEM-000003',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    id: 'Scms-MEM-000003',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     fullName: 'Muhammad Ryan bin Abdullah',
     preferredName: 'Ryan',
     gender: 'Male',
@@ -310,9 +310,9 @@ export const INITIAL_MEMBERS: Member[] = [
     updatedAt: '2026-02-15T00:00:00Z',
   },
   {
-    id: 'SCMS-MEM-000004',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B002',
+    id: 'Scms-MEM-000004',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B002',
     fullName: 'Subramaniam Krishnan',
     preferredName: 'Subra',
     gender: 'Male',
@@ -343,15 +343,15 @@ export const INITIAL_MEMBERS: Member[] = [
 
 export const INITIAL_VOLUNTEERS: Volunteer[] = [
   {
-    id: 'SCMS-VOL-000001',
-    memberId: 'SCMS-MEM-000001',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    id: 'Scms-VOL-000001',
+    memberId: 'Scms-MEM-000001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     skills: ['First Aid Certified', 'Weigh-in Marshalling', 'Tatami Runner', 'Photography'],
     experienceYears: 3,
     availability: ['Saturday Morning', 'Sunday Full Day', 'Tournament Weekends'],
     preferredDuties: ['Tournament Support', 'Equipment & Logistics', 'Media & Photography'],
-    trainingCertifications: ['St John First Aid CPR 2025', 'SCMS Volunteer Orientation'],
+    trainingCertifications: ['St John First Aid CPR 2025', 'Scms Volunteer Orientation'],
     startDate: '2025-01-01',
     status: 'Active',
     totalHours: 42.5,
@@ -360,10 +360,10 @@ export const INITIAL_VOLUNTEERS: Volunteer[] = [
     updatedAt: '2026-02-28T00:00:00Z',
   },
   {
-    id: 'SCMS-VOL-000002',
-    memberId: 'SCMS-MEM-000004',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B002',
+    id: 'Scms-VOL-000002',
+    memberId: 'Scms-MEM-000004',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B002',
     skills: ['Logistics', 'Audio/Visual Setup', 'Scoreboard Operator'],
     experienceYears: 2,
     availability: ['Friday Evening', 'Saturday Afternoon'],
@@ -379,10 +379,10 @@ export const INITIAL_VOLUNTEERS: Volunteer[] = [
 export const INITIAL_VOLUNTEER_ASSIGNMENTS: VolunteerAssignment[] = [
   {
     id: 'vas-01',
-    volunteerId: 'SCMS-VOL-000001',
+    volunteerId: 'Scms-VOL-000001',
     volunteerName: 'Ahmad Daniel',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     eventName: 'Annual Goju-Ryu Junior Kata Championship 2026',
     dutyType: 'Tournament Support',
     scheduledStartTime: '2026-04-18T08:00:00Z',
@@ -394,10 +394,10 @@ export const INITIAL_VOLUNTEER_ASSIGNMENTS: VolunteerAssignment[] = [
   },
   {
     id: 'vas-02',
-    volunteerId: 'SCMS-VOL-000001',
+    volunteerId: 'Scms-VOL-000001',
     volunteerName: 'Ahmad Daniel',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     eventName: 'Saturday Belt Grading Session',
     dutyType: 'Equipment & Logistics',
     scheduledStartTime: '2026-03-07T08:30:00Z',
@@ -415,8 +415,8 @@ export const INITIAL_VOLUNTEER_ASSIGNMENTS: VolunteerAssignment[] = [
 export const INITIAL_TRAINING_GROUPS: TrainingGroup[] = [
   {
     id: 'tg-01',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     name: 'Elite Kumite Squad (16+)',
     ageGroup: '16 Years & Above',
     skillLevel: 'Advanced / Dan Grade',
@@ -430,8 +430,8 @@ export const INITIAL_TRAINING_GROUPS: TrainingGroup[] = [
   },
   {
     id: 'tg-02',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     name: 'Junior Kata Development (U-14)',
     ageGroup: '8 - 14 Years Old',
     skillLevel: 'Beginner to Intermediate',
@@ -444,8 +444,8 @@ export const INITIAL_TRAINING_GROUPS: TrainingGroup[] = [
   },
   {
     id: 'tg-03',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B002',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B002',
     name: 'USJ Adult General Karate',
     ageGroup: 'All Ages',
     skillLevel: 'All Ranks',
@@ -461,8 +461,8 @@ export const INITIAL_TRAINING_GROUPS: TrainingGroup[] = [
 export const INITIAL_SESSIONS: TrainingClassSession[] = [
   {
     id: 'sess-01',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     trainingGroupId: 'tg-01',
     groupName: 'Elite Kumite Squad (16+)',
     coachId: 'usr-clubadmin-senshi',
@@ -477,8 +477,8 @@ export const INITIAL_SESSIONS: TrainingClassSession[] = [
   },
   {
     id: 'sess-02',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     trainingGroupId: 'tg-02',
     groupName: 'Junior Kata Development (U-14)',
     coachId: 'usr-branchmgr-usj',
@@ -497,10 +497,10 @@ export const INITIAL_ATTENDANCE: AttendanceRecord[] = [
   {
     id: 'att-01',
     sessionId: 'sess-01',
-    memberId: 'SCMS-MEM-000001',
+    memberId: 'Scms-MEM-000001',
     memberName: 'Ahmad Daniel',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     status: 'Present',
     checkInTime: '19:25',
     remarks: 'Good physical form and sparring focus',
@@ -510,10 +510,10 @@ export const INITIAL_ATTENDANCE: AttendanceRecord[] = [
   {
     id: 'att-02',
     sessionId: 'sess-01',
-    memberId: 'SCMS-MEM-000002',
+    memberId: 'Scms-MEM-000002',
     memberName: 'Chloe Tan',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     status: 'Present',
     checkInTime: '19:30',
     recordedBy: 'Shihan Kannan',
@@ -522,10 +522,10 @@ export const INITIAL_ATTENDANCE: AttendanceRecord[] = [
   {
     id: 'att-03',
     sessionId: 'sess-01',
-    memberId: 'SCMS-MEM-000004',
+    memberId: 'Scms-MEM-000004',
     memberName: 'Subramaniam Krishnan',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     status: 'Late',
     checkInTime: '19:45',
     remarks: 'Traffic congestion at Puchong toll',
@@ -537,7 +537,7 @@ export const INITIAL_ATTENDANCE: AttendanceRecord[] = [
 export const INITIAL_PLANS: MembershipPlan[] = [
   {
     id: 'plan-01',
-    clubId: 'SCMS-CLUB-000001',
+    clubId: 'Scms-CLUB-000001',
     name: 'Standard Monthly Training (Adult)',
     description: 'Access to 3 training sessions per week at all authorized branches.',
     frequency: 'Monthly',
@@ -547,7 +547,7 @@ export const INITIAL_PLANS: MembershipPlan[] = [
   },
   {
     id: 'plan-02',
-    clubId: 'SCMS-CLUB-000001',
+    clubId: 'Scms-CLUB-000001',
     name: 'Junior Cadet Academy (U-16)',
     description: 'Weekly 2 sessions including development belt progression modules.',
     frequency: 'Monthly',
@@ -557,7 +557,7 @@ export const INITIAL_PLANS: MembershipPlan[] = [
   },
   {
     id: 'plan-03',
-    clubId: 'SCMS-CLUB-000001',
+    clubId: 'Scms-CLUB-000001',
     name: 'Annual National Competitor Pass',
     description: 'Full year unlimited squad training + tournament coaching coverage.',
     frequency: 'Annual',
@@ -569,11 +569,11 @@ export const INITIAL_PLANS: MembershipPlan[] = [
 
 export const INITIAL_INVOICES: Invoice[] = [
   {
-    id: 'SCMS-INV-000001',
+    id: 'Scms-INV-000001',
     invoiceNumber: 'INV-2026-0001',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
-    memberId: 'SCMS-MEM-000001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
+    memberId: 'Scms-MEM-000001',
     memberName: 'Ahmad Daniel',
     items: [
       { id: 'i1', description: 'Monthly Training Fee - March 2026', quantity: 1, unitPrice: 150.0, amount: 150.0 },
@@ -590,11 +590,11 @@ export const INITIAL_INVOICES: Invoice[] = [
     createdAt: '2026-03-01T08:00:00Z',
   },
   {
-    id: 'SCMS-INV-000002',
+    id: 'Scms-INV-000002',
     invoiceNumber: 'INV-2026-0002',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
-    memberId: 'SCMS-MEM-000003',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
+    memberId: 'Scms-MEM-000003',
     memberName: 'Muhammad Ryan',
     items: [
       { id: 'i3', description: 'Junior Cadet Academy Fee - March 2026', quantity: 1, unitPrice: 120.0, amount: 120.0 },
@@ -613,12 +613,12 @@ export const INITIAL_INVOICES: Invoice[] = [
 
 export const INITIAL_RECEIPTS: PaymentReceipt[] = [
   {
-    id: 'SCMS-REC-000001',
+    id: 'Scms-REC-000001',
     receiptNumber: 'REC-2026-0001',
-    invoiceId: 'SCMS-INV-000001',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
-    memberId: 'SCMS-MEM-000001',
+    invoiceId: 'Scms-INV-000001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
+    memberId: 'Scms-MEM-000001',
     memberName: 'Ahmad Daniel',
     amount: 200.0,
     paymentMethod: 'DuitNow QR',
@@ -630,8 +630,8 @@ export const INITIAL_RECEIPTS: PaymentReceipt[] = [
 
 export const INITIAL_EVENTS: ClubEvent[] = [
   {
-    id: 'SCMS-EVT-000001',
-    clubId: 'SCMS-CLUB-000001',
+    id: 'Scms-EVT-000001',
+    clubId: 'Scms-CLUB-000001',
     title: 'Goju-Ryu Sanchin & Tensho Kata Masterclass',
     eventType: 'Seminar',
     startDate: '2026-03-28T09:00:00Z',
@@ -645,8 +645,8 @@ export const INITIAL_EVENTS: ClubEvent[] = [
     createdAt: '2026-02-15T09:00:00Z',
   },
   {
-    id: 'SCMS-EVT-000002',
-    clubId: 'SCMS-CLUB-000001',
+    id: 'Scms-EVT-000002',
+    clubId: 'Scms-CLUB-000001',
     title: 'State Junior Selection Camp 2026',
     eventType: 'Camp',
     startDate: '2026-04-10T08:00:00Z',
@@ -663,7 +663,7 @@ export const INITIAL_EVENTS: ClubEvent[] = [
 
 export const INITIAL_TASKS: SystemTask[] = [
   {
-    id: 'SCMS-TSK-000001',
+    id: 'Scms-TSK-000001',
     title: 'Review and approve new club registration for Wira Kabaddi',
     description: 'Verify registration documents and primary administrator identity credentials.',
     assignedToName: 'Dato’ Sri Shanker',
@@ -674,12 +674,12 @@ export const INITIAL_TASKS: SystemTask[] = [
     createdAt: '2026-03-01T12:00:00Z',
   },
   {
-    id: 'SCMS-TSK-000002',
+    id: 'Scms-TSK-000002',
     title: 'Finalize KarateTech 3.0 draft entry for Senshi Open Championship',
     description: 'Check participant weigh-in compliance and submit final club roster.',
     assignedToName: 'Shihan Kannan',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     priority: 'Urgent',
     dueDate: '2026-03-15',
     status: 'In Progress',
@@ -690,10 +690,10 @@ export const INITIAL_TASKS: SystemTask[] = [
 
 export const INITIAL_APPROVALS: ApprovalRequest[] = [
   {
-    id: 'SCMS-APP-000001',
+    id: 'Scms-APP-000001',
     type: 'Club Registration',
     title: 'New Club Registration: Wira Kabaddi Association',
-    clubId: 'SCMS-CLUB-000004',
+    clubId: 'Scms-CLUB-000004',
     clubName: 'Wira Kabaddi Association',
     submittedByUserId: 'usr-wira-ravi',
     submittedByName: 'Ravi Chandran',
@@ -706,10 +706,10 @@ export const INITIAL_APPROVALS: ApprovalRequest[] = [
     },
   },
   {
-    id: 'SCMS-APP-000002',
+    id: 'Scms-APP-000002',
     type: 'Branch Creation',
     title: 'New Branch Application: Dojo Cyberjaya Tech',
-    clubId: 'SCMS-CLUB-000001',
+    clubId: 'Scms-CLUB-000001',
     clubName: 'Senshi Karate',
     branchName: 'Dojo Cyberjaya Tech',
     submittedByUserId: 'usr-clubadmin-senshi',
@@ -726,7 +726,7 @@ export const INITIAL_APPROVALS: ApprovalRequest[] = [
 export const INITIAL_AUTOMATION_RULES: AutomationRule[] = [
   {
     id: 'rule-01',
-    clubId: 'SCMS-CLUB-000001',
+    clubId: 'Scms-CLUB-000001',
     name: '14-Day Membership Expiry Warning',
     triggerEvent: 'MEMBERSHIP_EXPIRING_DAYS',
     triggerConditionValue: 14,
@@ -737,7 +737,7 @@ export const INITIAL_AUTOMATION_RULES: AutomationRule[] = [
   },
   {
     id: 'rule-02',
-    clubId: 'SCMS-CLUB-000001',
+    clubId: 'Scms-CLUB-000001',
     name: 'Consecutive Absenteeism Coach Alert',
     triggerEvent: 'ATTENDANCE_MISSED_CONSECUTIVE',
     triggerConditionValue: 3,
@@ -748,7 +748,7 @@ export const INITIAL_AUTOMATION_RULES: AutomationRule[] = [
   },
   {
     id: 'rule-03',
-    clubId: 'SCMS-CLUB-000001',
+    clubId: 'Scms-CLUB-000001',
     name: 'Tournament Registration Deadline Reminder',
     triggerEvent: 'TOURNAMENT_DEADLINE_APPROACHING',
     triggerConditionValue: 7,
@@ -762,8 +762,8 @@ export const INITIAL_AUTOMATION_RULES: AutomationRule[] = [
 export const INITIAL_ACTIVITY_LOGS: ActivityFeedItem[] = [
   {
     id: 'act-01',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     userName: 'Shihan Kannan',
     action: 'Payment Logged',
     details: 'Received MYR 200.00 from Ahmad Daniel (INV-2026-0001) via DuitNow QR.',
@@ -772,8 +772,8 @@ export const INITIAL_ACTIVITY_LOGS: ActivityFeedItem[] = [
   },
   {
     id: 'act-02',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     userName: 'Shihan Kannan',
     action: 'Attendance Recorded',
     details: 'Completed attendance roll for Elite Kumite Squad (18 athletes present).',
@@ -782,8 +782,8 @@ export const INITIAL_ACTIVITY_LOGS: ActivityFeedItem[] = [
   },
   {
     id: 'act-03',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     userName: 'Ahmad Daniel',
     action: 'Volunteer Check-In',
     details: 'Checked in for Saturday Belt Grading Session at Honbu Dojo.',
@@ -794,7 +794,7 @@ export const INITIAL_ACTIVITY_LOGS: ActivityFeedItem[] = [
 
 export const INITIAL_KARATETECH_MAPPINGS: KarateTechClubMapping[] = [
   {
-    scmsClubId: 'SCMS-CLUB-000001',
+    scmsClubId: 'Scms-CLUB-000001',
     karateTechClubId: '9a5e8b4e-1a2b-3c4d-5e6f-7a8b9c0d1e2f',
     karateTechClubName: 'Senshi Karate Academy',
     connectionStatus: 'Connected',
@@ -804,17 +804,17 @@ export const INITIAL_KARATETECH_MAPPINGS: KarateTechClubMapping[] = [
 
 export const INITIAL_TOURNAMENT_DRAFTS: TournamentRegistrationDraft[] = [
   {
-    id: 'SCMS-TREG-000001',
+    id: 'Scms-TREG-000001',
     tournamentId: 'aa5e8b4e-1a2b-3c4d-5e6f-7a8b9c0d1e2f',
     tournamentName: 'Kelab Senshi Goju-Ryu Open Karate Championship 2026',
     tournamentDate: '15–16 August 2026',
-    clubId: 'SCMS-CLUB-000001',
-    branchId: 'SCMS-CLUB-000001-B001',
+    clubId: 'Scms-CLUB-000001',
+    branchId: 'Scms-CLUB-000001-B001',
     idempotencyKey: 'idem-senshi-2026-0001-reg',
     status: 'READY',
     participants: [
       {
-        scmsMemberId: 'SCMS-MEM-000001',
+        scmsMemberId: 'Scms-MEM-000001',
         memberName: 'Ahmad Daniel bin Razak',
         discipline: 'Kumite',
         targetCategoryId: 'e25e8b4e-1a2b-3c4d-5e6f-7a8b9c0d1e2f',
@@ -825,7 +825,7 @@ export const INITIAL_TOURNAMENT_DRAFTS: TournamentRegistrationDraft[] = [
         eligibilityPassed: true,
       },
       {
-        scmsMemberId: 'SCMS-MEM-000002',
+        scmsMemberId: 'Scms-MEM-000002',
         memberName: 'Chloe Tan Jia Xin',
         discipline: 'Kumite',
         targetCategoryId: 'e65e8b4e-1a2b-3c4d-5e6f-7a8b9c0d1e2f',
@@ -842,7 +842,7 @@ export const INITIAL_TOURNAMENT_DRAFTS: TournamentRegistrationDraft[] = [
 ];
 
 // ==========================================
-// SCMS MASTER STORE CLASS
+// Scms MASTER STORE CLASS
 // ==========================================
 
 class ScmsStore {
@@ -1077,8 +1077,8 @@ class ScmsStore {
     const memberId = generateImmutableId('MEM');
     const newMember: Member = {
       id: memberId,
-      clubId: memberData.clubId || 'SCMS-CLUB-000001',
-      branchId: memberData.branchId || 'SCMS-CLUB-000001-B001',
+      clubId: memberData.clubId || 'Scms-CLUB-000001',
+      branchId: memberData.branchId || 'Scms-CLUB-000001-B001',
       fullName: memberData.fullName || 'New Member',
       preferredName: memberData.preferredName,
       gender: memberData.gender || 'Male',
@@ -1271,8 +1271,8 @@ class ScmsStore {
     const newInvoice: Invoice = {
       id: invId,
       invoiceNumber: `INV-${new Date().getFullYear()}-${String(this.invoices.length + 1).padStart(4, '0')}`,
-      clubId: inv.clubId || 'SCMS-CLUB-000001',
-      branchId: inv.branchId || 'SCMS-CLUB-000001-B001',
+      clubId: inv.clubId || 'Scms-CLUB-000001',
+      branchId: inv.branchId || 'Scms-CLUB-000001-B001',
       memberId: inv.memberId || '',
       memberName: member?.fullName || inv.memberName || 'Member',
       items,

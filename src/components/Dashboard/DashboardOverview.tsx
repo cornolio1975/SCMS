@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SCMS Dynamic Multi-Role Dashboard Overview & Club Health Metrics
+ * Scms Dynamic Multi-Role Dashboard Overview & Club Health Metrics
  * Sections 24 & 29: Dynamic dashboards for SuperAdmin, Club Admin, Branch Manager, Coach, Volunteer, and Parent
  */
 

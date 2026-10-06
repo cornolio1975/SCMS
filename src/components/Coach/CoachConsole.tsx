@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SCMS Coach Console Component
+ * Scms Coach Console Component
  * Section 16 & 39: Dedicated Coach Console, mobile-first attendance taking, athlete progression, and squad management
  */
 
@@ -28,13 +28,13 @@ export default function CoachConsole() {
   const { currentUser, activeClub } = useAuth();
   const [selectedSessionId, setSelectedSessionId] = useState<string>('sess-01');
   const [rosterStatus, setRosterStatus] = useState<Record<string, AttendanceStatus>>({
-    'SCMS-MEM-000001': 'Present',
-    'SCMS-MEM-000002': 'Present',
-    'SCMS-MEM-000004': 'Late',
+    'Scms-MEM-000001': 'Present',
+    'Scms-MEM-000002': 'Present',
+    'Scms-MEM-000004': 'Late',
   });
   const [rosterRemarks, setRosterRemarks] = useState<Record<string, string>>({
-    'SCMS-MEM-000001': 'Sharp kata timing and focus',
-    'SCMS-MEM-000004': 'Puchong traffic delay',
+    'Scms-MEM-000001': 'Sharp kata timing and focus',
+    'Scms-MEM-000004': 'Puchong traffic delay',
   });
   const [isSaved, setIsSaved] = useState(false);
 

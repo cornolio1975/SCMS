@@ -1,5 +1,5 @@
 /**
- * SCMS — SPORTS CLUB MANAGEMENT SYSTEM
+ * Scms — SPORTS CLUB MANAGEMENT SYSTEM
  * SP SPORTDATA SOLUTION
  * Comprehensive Core Domain Types
  */
@@ -67,7 +67,7 @@ export type ClubStatus =
   | 'Archived';
 
 export interface Club {
-  id: string; // e.g. "SCMS-CLUB-000001"
+  id: string; // e.g. "Scms-CLUB-000001"
   name: string;
   shortName: string;
   sport: string; // e.g. "Karate", "Football", "Swimming", "Kabaddi"
@@ -97,7 +97,7 @@ export interface Club {
 }
 
 export interface ClubBranch {
-  id: string; // e.g. "SCMS-CLUB-000001-B001"
+  id: string; // e.g. "Scms-CLUB-000001-B001"
   clubId: string; // FK to Club
   name: string;
   address: string;
@@ -150,7 +150,7 @@ export interface SportConfiguration {
 export type MemberStatus = 'Active' | 'Inactive' | 'Suspended' | 'Archived' | 'Transferred';
 
 export interface Member {
-  id: string; // e.g. "SCMS-MEM-000001"
+  id: string; // e.g. "Scms-MEM-000001"
   clubId: string;
   branchId: string;
   userId?: string; // Linked system user if has login
@@ -214,7 +214,7 @@ export type VolunteerAssignmentStatus =
   | 'Cancelled';
 
 export interface Volunteer {
-  id: string; // e.g. "SCMS-VOL-000001"
+  id: string; // e.g. "Scms-VOL-000001"
   memberId: string; // FK to Member (strictly member-level)
   clubId: string;
   branchId: string;
@@ -352,7 +352,7 @@ export interface InvoiceItem {
 }
 
 export interface Invoice {
-  id: string; // e.g. "SCMS-INV-000001"
+  id: string; // e.g. "Scms-INV-000001"
   invoiceNumber: string;
   clubId: string;
   branchId: string;
@@ -372,7 +372,7 @@ export interface Invoice {
 }
 
 export interface PaymentReceipt {
-  id: string; // e.g. "SCMS-REC-000001"
+  id: string; // e.g. "Scms-REC-000001"
   receiptNumber: string;
   invoiceId: string;
   clubId: string;
@@ -392,7 +392,7 @@ export interface PaymentReceipt {
 // ==========================================
 
 export interface ClubEvent {
-  id: string; // e.g. "SCMS-EVT-000001"
+  id: string; // e.g. "Scms-EVT-000001"
   clubId: string;
   branchId?: string; // Optional if club-wide
   title: string;
@@ -409,7 +409,7 @@ export interface ClubEvent {
 }
 
 export interface SystemDocument {
-  id: string; // e.g. "SCMS-DOC-000001"
+  id: string; // e.g. "Scms-DOC-000001"
   clubId: string;
   branchId?: string;
   memberId?: string; // Optional if attached to member
@@ -431,7 +431,7 @@ export type TaskPriority = 'Low' | 'Medium' | 'High' | 'Urgent';
 export type TaskStatus = 'Open' | 'In Progress' | 'Completed' | 'Cancelled';
 
 export interface SystemTask {
-  id: string; // e.g. "SCMS-TSK-000001"
+  id: string; // e.g. "Scms-TSK-000001"
   title: string;
   description?: string;
   assignedToUserId?: string;
@@ -464,7 +464,7 @@ export type ApprovalRequestType =
 export type ApprovalStatus = 'Pending' | 'Under Review' | 'Approved' | 'Rejected';
 
 export interface ApprovalRequest {
-  id: string; // e.g. "SCMS-APP-000001"
+  id: string; // e.g. "Scms-APP-000001"
   type: ApprovalRequestType;
   title: string;
   clubId?: string;
@@ -584,7 +584,7 @@ export interface TournamentRegistrationItem {
 }
 
 export interface TournamentRegistrationDraft {
-  id: string; // e.g. "SCMS-TREG-000001"
+  id: string; // e.g. "Scms-TREG-000001"
   tournamentId: string;
   tournamentName: string;
   tournamentDate: string;

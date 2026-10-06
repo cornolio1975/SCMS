@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SCMS Top Header Navigation Component
+ * Scms Top Header Navigation Component
  * Section 28: Sidebar toggle, Breadcrumbs, Global Search, Club/Branch Switcher, Notifications, User Menu
  */
 
@@ -133,7 +133,7 @@ export default function TopHeader({
         </button>
 
         <div className="hidden sm:flex items-center space-x-2 text-sm">
-          <span className="font-semibold text-slate-500">SCMS</span>
+          <span className="font-semibold text-slate-500">Scms</span>
           <span className="text-slate-300">/</span>
           <span className="font-bold text-slate-900 capitalize">
             {currentModule.replace(/-/g, ' ')}

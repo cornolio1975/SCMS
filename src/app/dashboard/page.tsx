@@ -1,8 +1,5 @@
-'use client';
-
-import React from 'react';
-import WorkspaceView from '@/components/Workspace/WorkspaceView';
+import { redirect } from 'next/navigation';
 
 export default function DashboardPage() {
-  return <WorkspaceView initialModule="dashboard" />;
+  redirect('/api/auth/route-dispatch');
 }

@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SCMS ↔ KarateTech 3.0 Integration Module
+ * Scms ↔ KarateTech 3.0 Integration Module
  * Sections 58-67: Live Tournament Discovery, Category Validation Engine, Idempotent Draft Registration & SuperAdmin Monitor
  */
 
@@ -325,7 +325,7 @@ export default function KarateTechIntegration() {
             <table className="w-full text-left text-xs">
               <thead className="bg-slate-50 text-slate-500 uppercase text-[10px] font-bold border-b border-slate-200">
                 <tr>
-                  <th className="py-2.5 px-3">SCMS Club ID</th>
+                  <th className="py-2.5 px-3">Scms Club ID</th>
                   <th className="py-2.5 px-3">KarateTech Club ID</th>
                   <th className="py-2.5 px-3">Mapped Club Name</th>
                   <th className="py-2.5 px-3">Sync Status</th>

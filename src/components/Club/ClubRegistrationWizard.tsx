@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SCMS Club Registration Wizard Component
+ * Scms Club Registration Wizard Component
  * Section 9: Step-by-step multi-field registration wizard, immutable Club ID generation, SuperAdmin approval queue
  */
 

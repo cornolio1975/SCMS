@@ -15,7 +15,7 @@ export default function NotFound() {
           href="/"
           className="inline-block px-5 py-2.5 bg-[#0284C7] text-white font-bold text-xs rounded-xl shadow-xs hover:bg-[#0369A1] transition-colors"
         >
-          Return to SCMS Home
+          Return to Scms Home
         </Link>
       </div>
     </div>

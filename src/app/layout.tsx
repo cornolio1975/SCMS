@@ -3,9 +3,9 @@ import './globals.css';
 import { Providers } from './providers';
 
 export const metadata: Metadata = {
-  title: 'SCMS — Sports Club Management System | SP SportData Solution',
+  title: 'Scms — Sports Club Management System | SP SportData Solution',
   description: 'Enterprise multi-club, multi-branch, and sport-neutral Sports Club Management System powered by SP SportData Solution, integrated with KarateTech 3.0.',
-  keywords: ['Sports Club Management', 'SCMS', 'SP SportData Solution', 'KarateTech 3.0', 'Multi-tenant'],
+  keywords: ['Sports Club Management', 'Scms', 'SP SportData Solution', 'KarateTech 3.0', 'Multi-tenant'],
 };
 
 export const viewport: Viewport = {

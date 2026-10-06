@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SCMS Authentication & Session Context
+ * Scms Authentication & Session Context
  * Enforces RBAC (14 Roles), Multi-Tenant Isolation, Multi-Branch Filtering, and Multi-Role Switching
  */
 
@@ -29,15 +29,56 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  // Default to SuperAdmin for initial showcase / demonstration
-  const [currentUser, setCurrentUser] = useState<User | null>(INITIAL_USERS[0]);
-  const [activeRole, setActiveRole] = useState<SystemRole>(INITIAL_USERS[0].activeRole);
+  const [currentUser, setCurrentUser] = useState<User | null>(null);
+  const [activeRole, setActiveRole] = useState<SystemRole>('MEMBER');
   const [activeClubId, setActiveClubId] = useState<string | undefined>(undefined);
   const [activeBranchId, setActiveBranchId] = useState<string | undefined>(undefined);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Sync active club & branch objects
   const activeClub = activeClubId ? store.getClubById(activeClubId) || null : null;
   const activeBranch = activeBranchId ? store.getBranches().find(b => b.id === activeBranchId) || null : null;
+
+  useEffect(() => {
+    async function loadSession() {
+      try {
+        const { createClient } = await import('@/utils/supabase/client');
+        const supabase = createClient();
+        const { data: { user } } = await supabase.auth.getUser();
+        
+        if (user) {
+          // Fetch actual role from DB
+          const { data: userRole } = await supabase
+            .from('user_roles')
+            .select('role')
+            .eq('user_id', user.id)
+            .limit(1)
+            .single();
+            
+          const role = userRole?.role || 'MEMBER';
+          
+          // Create a mock User object from session for context compatibility
+          const mockUser: User = {
+            id: user.id,
+            email: user.email || '',
+            fullName: user.user_metadata?.full_name || 'User',
+            status: 'ACTIVE',
+            roles: [{ role, grantedAt: new Date().toISOString() }],
+            activeRole: role,
+            createdAt: user.created_at,
+          };
+          
+          setCurrentUser(mockUser);
+          setActiveRole(role as SystemRole);
+        }
+      } catch (e) {
+        console.error('Failed to load session:', e);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    loadSession();
+  }, []);
 
   // Compute authorized clubs for current user
   const authorizedClubs = React.useMemo(() => {
@@ -150,6 +191,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (['SUPERADMIN', 'SYSTEM_ADMIN', 'OBSERVER', 'CLUB_ADMIN', 'CLUB_CO_ADMIN'].includes(activeRole)) return true;
     return authorizedBranches.some(b => b.id === branchId);
   };
+
+  if (isLoading) {
+    return <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
+    </div>;
+  }
 
   return (
     <AuthContext.Provider

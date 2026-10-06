@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SCMS Task Management Component
+ * Scms Task Management Component
  * Section 19 & 43: Task ID, Assigned user, Club/Branch scope, Priority, Status (Open, In Progress, Completed, Cancelled)
  */
 

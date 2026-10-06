@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SCMS Parent / Guardian Portal
+ * Scms Parent / Guardian Portal
  * Sections 15 & 40: Multi-child management, attendance tracking, fee receipts, and tournament sign-off
  */
 
@@ -28,11 +28,11 @@ export default function ParentPortal() {
   
   // Find children linked to this guardian
   const children = store.members.filter(
-    m => m.guardianId === currentUser?.id || m.emergencyContactPhone === currentUser?.phone || m.id === 'SCMS-MEM-000003'
+    m => m.guardianId === currentUser?.id || m.emergencyContactPhone === currentUser?.phone || m.id === 'Scms-MEM-000003'
   );
 
   const [selectedChildId, setSelectedChildId] = useState<string>(
-    children[0]?.id || 'SCMS-MEM-000003'
+    children[0]?.id || 'Scms-MEM-000003'
   );
 
   const activeChild = children.find(c => c.id === selectedChildId) || children[0];

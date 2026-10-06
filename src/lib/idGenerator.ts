@@ -1,5 +1,5 @@
 /**
- * SCMS Immutable ID Generator
+ * Scms Immutable ID Generator
  * Generates structured, permanent, non-colliding human-readable identifiers
  * Compliant with Rule 6: Never use names as permanent identifiers.
  */
@@ -39,7 +39,7 @@ export function generateImmutableId(prefix: IdPrefix, parentClubId?: string, bra
   const current = (inMemoryCounters[prefix] || 1) + 1;
   inMemoryCounters[prefix] = current;
   const pad = String(current).padStart(6, '0');
-  return `SCMS-${prefix}-${pad}`;
+  return `Scms-${prefix}-${pad}`;
 }
 
 export function generateIdempotencyKey(): string {

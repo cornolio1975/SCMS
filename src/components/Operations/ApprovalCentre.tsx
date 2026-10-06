@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SCMS Approval Centre
+ * Scms Approval Centre
  * Section 18: Centralized, audited multi-tenant approvals (Club registrations, branch creation, role elevations, transfers)
  */
 

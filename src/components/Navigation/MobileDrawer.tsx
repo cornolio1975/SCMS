@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SCMS Mobile Navigation Drawer
+ * Scms Mobile Navigation Drawer
  * Section 30 & 31: Hamburger -> Light-Blue slide-out drawer, touch targets >= 44px, full role-based access
  */
 
@@ -145,7 +145,7 @@ export default function MobileDrawer({
 
         {/* Footer */}
         <div className="p-3 border-t border-[#BAE6FD] bg-[#E0F2FE]/40 text-center text-xs text-slate-500">
-          <span className="font-medium text-[11px]">SCMS Mobile • SP SportData Solution</span>
+          <span className="font-medium text-[11px]">Scms Mobile • SP SportData Solution</span>
         </div>
       </div>
     </div>

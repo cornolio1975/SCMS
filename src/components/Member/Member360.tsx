@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SCMS Member 360 Workspace
+ * Scms Member 360 Workspace
  * Section 12: Complete 12-tab operational view for any member or athlete
  * Overview | Personal | Membership | Attendance | Training | Payments | Grades | Tournaments | Volunteer | Documents | Communications | Activity
  */
@@ -468,7 +468,7 @@ export default function Member360({ member, onBack }: Member360Props) {
             <div className="p-6 bg-gradient-to-tr from-sky-600 to-indigo-700 rounded-3xl text-white shadow-xl space-y-4 text-left">
               <div className="flex justify-between items-start">
                 <div>
-                  <span className="text-[10px] uppercase font-bold tracking-widest text-sky-200 block">SCMS DIGITAL ID</span>
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-sky-200 block">Scms DIGITAL ID</span>
                   <span className="font-black text-base">{club?.shortName}</span>
                 </div>
                 <span className="px-2 py-0.5 rounded text-[10px] font-black bg-white/20 uppercase">

@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SCMS Desktop Sidebar Navigation
+ * Scms Desktop Sidebar Navigation
  * Strict Rule 26 & 27: LEFT = LIGHT BLUE NAVIGATION (240–280px), RIGHT = WHITE WORKSPACE
  * Fully role-based menu items with submenus, collapsible state, and active indicators
  */

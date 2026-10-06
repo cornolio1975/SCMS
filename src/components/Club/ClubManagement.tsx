@@ -1,8 +1,8 @@
 'use client';
 
 /**
- * SCMS Club Management & Multi-Branch Architecture
- * Sections 4, 5 & 10: Multi-tenant club profile, Branch hierarchy (SCMS-CLUB-xxxxxx-Bxxx), and Club Onboarding Wizard
+ * Scms Club Management & Multi-Branch Architecture
+ * Sections 4, 5 & 10: Multi-tenant club profile, Branch hierarchy (Scms-CLUB-xxxxxx-Bxxx), and Club Onboarding Wizard
  */
 
 import React, { useState } from 'react';

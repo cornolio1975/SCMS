@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SCMS Master Workspace View
+ * Scms Master Workspace View
  * Strict Rule 26: LEFT = LIGHT BLUE NAVIGATION, RIGHT = WHITE WORKSPACE
  */
 

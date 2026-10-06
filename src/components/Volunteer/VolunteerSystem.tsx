@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SCMS Dedicated Volunteer System & Mobile Volunteer Dashboard
+ * Scms Dedicated Volunteer System & Mobile Volunteer Dashboard
  * Sections 13, 14 & 38: Strict Member-Level role, duty assignment workflow, hours tracker, mobile Check-In / Check-Out
  */
 

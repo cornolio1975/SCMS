@@ -5,7 +5,7 @@ export const dynamic = 'force-dynamic';
 export async function GET() {
   return NextResponse.json({
     status: 'healthy',
-    system: 'SCMS — Sports Club Management System',
+    system: 'Scms — Sports Club Management System',
     company: 'SP SportData Solution',
     version: '1.0.0',
     timestamp: new Date().toISOString(),

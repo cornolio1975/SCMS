@@ -1,6 +1,6 @@
 /**
- * SCMS Sport Configuration Engine
- * Core SCMS remains sport-neutral; sport-specific attributes are dynamically configured.
+ * Scms Sport Configuration Engine
+ * Core Scms remains sport-neutral; sport-specific attributes are dynamically configured.
  */
 
 import { SportConfiguration } from '@/types';

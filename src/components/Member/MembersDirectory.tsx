@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SCMS Members Directory & Data Import Centre
+ * Scms Members Directory & Data Import Centre
  * Sections 7 & 23: Member roster, CSV import wizard, duplicate detection, and Member 360 launch pad
  */
 
@@ -416,7 +416,7 @@ export default function MembersDirectory() {
             {importStep === 1 && (
               <div className="space-y-4">
                 <p className="text-xs text-slate-500">
-                  Upload your existing club athlete or member roster CSV/Excel spreadsheet to batch-import into SCMS.
+                  Upload your existing club athlete or member roster CSV/Excel spreadsheet to batch-import into Scms.
                 </p>
 
                 <div

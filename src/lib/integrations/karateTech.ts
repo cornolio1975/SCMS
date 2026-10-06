@@ -1,5 +1,5 @@
 /**
- * SCMS ↔ KarateTech 3.0 Integration Layer
+ * Scms ↔ KarateTech 3.0 Integration Layer
  * Controlled, asynchronous, idempotent adapter adhering to Section 58-67
  * Authoritative system for Tournaments, Categories, Brackets, and Tatami: KarateTech 3.0
  */

@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SCMS Membership & Finance Module
+ * Scms Membership & Finance Module
  * Section 12 & 54: Plans, Invoices, DuitNow QR / FPX payment logging, and printable receipt generation
  */
 

@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SCMS — SPORTS CLUB MANAGEMENT SYSTEM
+ * Scms — SPORTS CLUB MANAGEMENT SYSTEM
  * SP SPORTDATA SOLUTION
  * Master Application Shell & Routing Controller
  * 
@@ -28,7 +28,7 @@ import TaskManagement from '@/components/Operations/TaskManagement';
 import FinanceModule from '@/components/Finance/FinanceModule';
 import { Club } from '@/types';
 
-export default function SCMSApp() {
+export default function ScmsApp() {
   const { currentUser } = useAuth();
   const [viewMode, setViewMode] = useState<'landing' | 'app'>('landing');
   const [currentModule, setCurrentModule] = useState<string>('dashboard');
