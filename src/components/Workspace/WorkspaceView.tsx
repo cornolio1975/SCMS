@@ -25,11 +25,13 @@ import Link from 'next/link';
 interface WorkspaceViewProps {
   initialModule?: string;
   onReturnToLanding?: () => void;
+  serverRole?: string;
 }
 
 export default function WorkspaceView({
   initialModule = 'dashboard',
   onReturnToLanding,
+  serverRole,
 }: WorkspaceViewProps) {
   const [currentModule, setCurrentModule] = useState<string>(initialModule);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
