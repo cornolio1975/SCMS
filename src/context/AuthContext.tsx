@@ -62,7 +62,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             id: user.id,
             email: user.email || '',
             fullName: user.user_metadata?.full_name || 'User',
-            status: 'ACTIVE',
+            status: 'Active',
             roles: [{ role, grantedAt: new Date().toISOString() }],
             activeRole: role,
             createdAt: user.created_at,
